@@ -29,7 +29,7 @@ matrix:
   allow_failures:
     - env: DJANGO_VERSION='https://github.com/django/django/archive/master.tar.gz'
 before_script:
-  - pip install coverage coveralls flake8
+  - pip install coverage coveralls flake8 six
   - pip install "$DJANGO_VERSION"
 script:
   - python manage.py migrate
